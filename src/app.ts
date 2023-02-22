@@ -7,7 +7,7 @@ import routes from "./routes";
 
 const app: Express = express();
 
-const port = config.get<string>(process.env.NODE_ENV === 'development' ? 'devPort' : 'prodPort');
+const port = config.get<string>('port');
 const origin = config.get<string>('origin');
 
 app.use(cors({
