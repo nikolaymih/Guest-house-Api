@@ -9,6 +9,7 @@ const app: Express = express();
 
 const port = config.get<string>('port');
 const origin = config.get<string>('origin');
+console.log(process.env.PORT);
 
 app.use(cors({
 	origin,
