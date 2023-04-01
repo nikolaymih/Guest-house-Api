@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static('views'));
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
 	logger.info(`The server has started listening on port ${port}`);
 
 	routes(app)
