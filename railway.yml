@@ -1,0 +1,9 @@
+# railway.yml
+plugins:
+  - name: postgresql
+build:
+  builder: 'railway/node'
+  environment:
+    NODE_ENV: 'production'
+run:
+  web: 'npm start'
