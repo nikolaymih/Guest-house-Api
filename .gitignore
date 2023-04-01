@@ -5,6 +5,7 @@
 
 # Node artifact files
 node_modules/
+
 config/default.ts
 config/default.production.ts
 
