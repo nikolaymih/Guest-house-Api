@@ -5,7 +5,8 @@
 
 # Node artifact files
 node_modules/
-config/*
+config/default.ts
+config/default.production.ts
 
 # Compiled Java class files
 *.class
