@@ -7,8 +7,9 @@ import routes from "./routes";
 
 const app: Express = express();
 
-const port = config.get<string>('port');
-const origin = config.get<string>('origin');
+// const port = config.get<string>('port');
+const port = process.env.PORT;
+const origin =  process.env.ORIGIN;
 
 app.use(cors({
 	origin,
