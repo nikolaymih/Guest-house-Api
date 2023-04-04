@@ -1,5 +1,4 @@
 import express, {Express} from 'express';
-import config from 'config';
 import cors from 'cors';
 
 import logger from './utils/logger';
@@ -7,9 +6,8 @@ import routes from "./routes";
 
 const app: Express = express();
 
-// const port = config.get<string>('port');
 const port = process.env.PORT;
-const origin =  process.env.ORIGIN;
+const origin = process.env.ORIGIN;
 
 app.use(cors({
 	origin,
