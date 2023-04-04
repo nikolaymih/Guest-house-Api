@@ -1,5 +1,4 @@
 import nodeMailer from 'nodemailer';
-import config from "config";
 import {createReservationType} from "../schema/reservation.schema";
 
 const receiver = process.env.EMAIL_USER;
