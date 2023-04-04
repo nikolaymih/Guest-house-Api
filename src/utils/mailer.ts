@@ -1,5 +1,4 @@
 import nodeMailer from 'nodemailer';
-import config from "config";
 import {createReservationType} from "../schema/reservation.schema";
 
 const user = process.env.EMAIL_USER;
@@ -12,7 +11,7 @@ export const transporter = nodeMailer.createTransport({
 		user,
 		pass
 	},
-	secure: true
+	secure: false
 })
 
 export const configureMailMessage = ({fullName, email, phone, subject, message}: createReservationType['body']) => {
