@@ -2,7 +2,7 @@ import nodeMailer from 'nodemailer';
 import {createReservationType} from "../schema/reservation.schema";
 
 const user = process.env.EMAIL_USER;
-const pass = process.env.PASS;
+const pass = process.env.PASS
 
 export const transporter = nodeMailer.createTransport({
 	port: 465,
