@@ -4,7 +4,7 @@ import {createReservationType} from "../schema/reservation.schema";
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 
-console.log(user, pass);
+console.log(user, pass)
 
 export const transporter = nodeMailer.createTransport({
 	port: 465,
