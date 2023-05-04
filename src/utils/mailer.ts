@@ -11,7 +11,7 @@ export const transporter = nodeMailer.createTransport({
 		user,
 		pass
 	},
-	secure: false
+	secure: true
 })
 
 export const configureMailMessage = ({fullName, email, phone, subject, message}: createReservationType['body']) => {
