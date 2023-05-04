@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 import {minRequiredMessageVal, requiredMessageValidation, validationErrorMessage} from "../utils/helpers";
 
-const fullNameRegex = /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/;
+const fullNameRegex = /^[a-zA-Zа-яА-Я]+ [a-zA-Zа-яА-Я]+$/;
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
