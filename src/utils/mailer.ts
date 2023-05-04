@@ -17,7 +17,7 @@ export const transporter = nodeMailer.createTransport({
 export const configureMailMessage = ({fullName, email, phone, subject, message}: createReservationType['body']) => {
 	return {
 		from: user,  // sender address
-		to: user,   // list of receivers
+		to: email,   // list of receivers
 		subject: 'Ново запитване за резервация',
 		text: 'That was easy!',
 		html: `<b>Туко що бе получено ново запитване за резервация със съответната информация:</b><br/>
