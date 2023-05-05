@@ -6,7 +6,7 @@ const pass = process.env.EMAIL_PASS;
 const receiver = process.env.NODE_ENV === 'production'
 	? process.env.EMAIL_PROD_RECEIVER
 	: process.env.EMAIL_DEV_RECEIVER;
-console.log(receiver);
+console.log(process.env.NODE_ENV);
 
 export const transporter = nodeMailer.createTransport({
 	port: 465,
