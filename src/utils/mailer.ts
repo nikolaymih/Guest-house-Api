@@ -3,8 +3,10 @@ import {createReservationType} from "../schema/reservation.schema";
 
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
-
-console.log(user, pass)
+const receiver = process.env.NODE_ENV === 'production'
+	? process.env.EMAIL_PROD_RECEIVER
+	: process.env.EMAIL_DEV_RECEIVER;
+console.log(receiver);
 
 export const transporter = nodeMailer.createTransport({
 	port: 465,
@@ -19,7 +21,7 @@ export const transporter = nodeMailer.createTransport({
 export const configureMailMessage = ({fullName, email, phone, subject, message}: createReservationType['body']) => {
 	return {
 		from: email,  // sender address
-		to: user,   // list of receivers
+		to: receiver,   // list of receivers
 		subject: 'Ново запитване за резервация',
 		text: 'That was easy!',
 		html: `<b>Туко що бе получено ново запитване за резервация със съответната информация:</b><br/>

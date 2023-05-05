@@ -7,7 +7,7 @@ import routes from "./routes";
 const app: Express = express();
 
 const port = process.env.PORT;
-const origin = process.env.ORIGIN;
+const origin = process.env.NODE_ENV === 'production' ? process.env.ORIGIN_PROD : process.env.ORIGIN_DEV;
 
 app.use(cors({
 	origin,
